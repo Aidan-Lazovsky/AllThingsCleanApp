@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "mongodb": "^7.0.0",
+    "railway": "^2.0.17"
+  }
+}
