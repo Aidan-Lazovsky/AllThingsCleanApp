@@ -4,34 +4,5 @@ nixPkgs = ["nodejs_20"]
 [phases.install]
 cmds = ["npm ci"]
 
-[phases.build]
-cmds = ["echo 'No build step needed'"]
-
 [start]
-cmd = "npm start"
-```
-
----
-
-### **Solution 2: Tell Railway to Use Nixpacks for Node.js**
-
-In your Railway project:
-
-1. **Go to Service Settings**
-2. **Find "Build & Deploy" or "Builder" section**
-3. **Set Build Command:**
-```
-   npm install
-```
-4. **Set Start Command:**
-```
-   npm start
-```
-
----
-
-### **Solution 3: Add Procfile**
-
-Create a `Procfile` (no extension) in your backend root:
-```
-web: npm start
+cmd = "node server.js"
