@@ -35,6 +35,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/allthings
 const Product = require('./models/Product');
 const Customer = require('./models/Customer');
 const Order = require('./models/Order');
+const User = require('./models/User');
 
 // ===== HEALTH CHECK =====
 app.get('/', (req, res) => {
@@ -55,6 +56,9 @@ app.get('/api/health', (req, res) => {
 });
 
 // ===== SHOPIFY ROUTES =====
+
+const authRoutes = require('./routes/auth');
+app.use('/api/auth', authRoutes);
 
 /**
  * Test Shopify connection
