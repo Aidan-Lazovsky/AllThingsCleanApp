@@ -1,4 +1,4 @@
-i// services/shopify.js - Shopify API Integration
+// services/shopify.js - Shopify API Integration
 
 const fetch = require('node-fetch');
 
