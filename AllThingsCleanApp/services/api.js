@@ -1,12 +1,12 @@
 // services/api.js - API Service for connecting React Native to Backend
 
 // Enable mock mode when backend is not available
-const USE_MOCK_DATA = true; // Set to false when backend is ready
+const USE_MOCK_DATA = false; // Set to false when backend is ready
 
 // API Configuration - only used when USE_MOCK_DATA = false
 const API_BASE_URL = __DEV__ 
   ? 'http://localhost:3000/api'  // For development
-  : 'https://your-production-api.com/api'; // For production
+  : 'https://allthingscleanapp-production.up.railway.app/api';  // For production
 
 // Mock product data
 const getMockProducts = () => {
